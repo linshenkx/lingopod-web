@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "features": "Features",
+    "platforms": "Platforms",
+    "github": "GitHub"
+  },
+  "hero": {
+    "title": "Transform Content into Bilingual Learning",
+    "subtitle": "Open-source AI-powered podcast generator for immersive language learning",
+    "start": "Start Learning",
+    "explore": "Explore GitHub"
+  },
+  "features": {
+    "title": "Core Features",
+    "subtitle": "Powered by advanced AI technology",
+    "items": {
+      "ai": {
+        "title": "AI Content Processing",
+        "description": "Smart content extraction and summarization"
+      },
+      "tts": {
+        "title": "High-Quality TTS",
+        "description": "Natural voice synthesis in multiple languages"
+      },
+      "bilingual": {
+        "title": "Bilingual Support",
+        "description": "Seamless language switching with synchronized subtitles"
+      },
+      "offline": {
+        "title": "Offline Access",
+        "description": "Download content for learning anywhere"
+      },
+      "interactive": {
+        "title": "Interactive Learning",
+        "description": "Follow along with synchronized bilingual transcripts"
+      },
+      "smart": {
+        "title": "Smart Processing",
+        "description": "Advanced content extraction and optimization"
+      }
+    }
+  },
+  "platforms": {
+    "title": "Access Anywhere",
+    "subtitle": "Multiple platforms supported",
+    "admin": "Admin Dashboard",
+    "web": "Web Client",
+    "mobile": "Mobile App",
+    "desktop": "Desktop App"
+  },
+  "footer": {
+    "about": "About",
+    "github": "GitHub",
+    "license": "MIT License"
+  }
+}

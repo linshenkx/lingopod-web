@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "features": "功能特点",
+    "platforms": "使用平台",
+    "github": "GitHub"
+  },
+  "hero": {
+    "title": "将内容转化为双语学习体验",
+    "subtitle": "开源AI驱动的播客生成工具，打造沉浸式语言学习",
+    "start": "开始学习",
+    "explore": "探索源码"
+  },
+  "features": {
+    "title": "核心功能",
+    "subtitle": "由先进AI技术驱动",
+    "items": {
+      "ai": {
+        "title": "AI内容处理",
+        "description": "智能内容提取与总结"
+      },
+      "tts": {
+        "title": "高质量语音合成",
+        "description": "多语言自然语音合成"
+      },
+      "bilingual": {
+        "title": "双语支持",
+        "description": "无缝语言切换与字幕同步"
+      },
+      "offline": {
+        "title": "离线访问",
+        "description": "下载内容随时学习"
+      },
+      "interactive": {
+        "title": "互动学习",
+        "description": "同步双语字幕跟读学习"
+      },
+      "smart": {
+        "title": "智能处理",
+        "description": "高级内容提取与优化"
+      }
+    }
+  },
+  "platforms": {
+    "title": "随处可用",
+    "subtitle": "支持多个平台",
+    "admin": "管理后台",
+    "web": "网页客户端",
+    "mobile": "移动应用",
+    "desktop": "桌面应用"
+  },
+  "footer": {
+    "about": "关于我们",
+    "github": "GitHub",
+    "license": "MIT 许可证"
+  }
+}
