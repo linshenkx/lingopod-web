@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Brain, Mic2, Languages, Download, BookOpen, Sparkles } from 'lucide-react';
+import { Brain, MessageSquare, Mic2, FileText, Languages, Music, Rocket, Smartphone } from 'lucide-react';
 
 const Features = () => {
   const { t } = useTranslation();
@@ -8,33 +8,35 @@ const Features = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: t('features.items.ai.title'),
-      description: t('features.items.ai.description')
+      key: 'extract'
+    },
+    {
+      icon: <MessageSquare className="w-6 h-6" />,
+      key: 'dialogue'
     },
     {
       icon: <Mic2 className="w-6 h-6" />,
-      title: t('features.items.tts.title'),
-      description: t('features.items.tts.description')
+      key: 'tts'
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      key: 'subtitle'
     },
     {
       icon: <Languages className="w-6 h-6" />,
-      title: t('features.items.bilingual.title'),
-      description: t('features.items.bilingual.description')
+      key: 'switch'
     },
     {
-      icon: <Download className="w-6 h-6" />,
-      title: t('features.items.offline.title'),
-      description: t('features.items.offline.description')
+      icon: <Music className="w-6 h-6" />,
+      key: 'audio'
     },
     {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: t('features.items.interactive.title'),
-      description: t('features.items.interactive.description')
+      icon: <Rocket className="w-6 h-6" />,
+      key: 'api'
     },
     {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: t('features.items.smart.title'),
-      description: t('features.items.smart.description')
+      icon: <Smartphone className="w-6 h-6" />,
+      key: 'platform'
     }
   ];
 
@@ -49,12 +51,16 @@ const Features = () => {
             {t('features.subtitle')}
           </p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-dark-700/50 p-4 sm:p-6 rounded-xl">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {features.map((feature) => (
+            <div key={feature.key} className="bg-dark-700/50 p-4 sm:p-6 rounded-xl">
               <div className="text-accent-500 mb-3">{feature.icon}</div>
-              <h3 className="text-base sm:text-lg font-semibold mb-2 text-white">{feature.title}</h3>
-              <p className="text-sm sm:text-base text-dark-200">{feature.description}</p>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 text-white">
+                {t(`features.items.${feature.key}.title`)}
+              </h3>
+              <p className="text-sm sm:text-base text-dark-200">
+                {t(`features.items.${feature.key}.description`)}
+              </p>
             </div>
           ))}
         </div>

@@ -5,52 +5,94 @@
     "github": "GitHub"
   },
   "hero": {
-    "title": "Transform Content into Bilingual Learning",
-    "subtitle": "Open-source AI-powered podcast generator for immersive language learning",
-    "start": "Start Learning",
-    "explore": "Explore GitHub"
+    "title": "LingoPod",
+    "subtitle": "Open-source bilingual podcast generator - Transform web content into immersive language learning",
+    "start": "Get Started",
+    "explore": "Source Code"
   },
   "features": {
-    "title": "Core Features",
-    "subtitle": "Powered by advanced AI technology",
+    "title": "Features",
+    "subtitle": "All-in-one solution for content creators and language learners",
     "items": {
-      "ai": {
-        "title": "AI Content Processing",
-        "description": "Smart content extraction and summarization"
+      "extract": {
+        "title": "Content Extraction",
+        "description": "Auto-extract and summarize web content"
+      },
+      "dialogue": {
+        "title": "AI Dialogue",
+        "description": "Generate natural bilingual conversations"
       },
       "tts": {
-        "title": "High-Quality TTS",
-        "description": "Natural voice synthesis in multiple languages"
+        "title": "Text-to-Speech",
+        "description": "High-quality bilingual voice synthesis"
       },
-      "bilingual": {
-        "title": "Bilingual Support",
-        "description": "Seamless language switching with synchronized subtitles"
+      "subtitle": {
+        "title": "Auto Subtitles",
+        "description": "Generate synchronized bilingual subtitles"
       },
-      "offline": {
-        "title": "Offline Access",
-        "description": "Download content for learning anywhere"
+      "switch": {
+        "title": "Language Switch",
+        "description": "Switch between Chinese and English audio"
       },
-      "interactive": {
-        "title": "Interactive Learning",
-        "description": "Follow along with synchronized bilingual transcripts"
+      "audio": {
+        "title": "Audio Processing",
+        "description": "Smart audio quality optimization"
       },
-      "smart": {
-        "title": "Smart Processing",
-        "description": "Advanced content extraction and optimization"
+      "api": {
+        "title": "API Support",
+        "description": "Complete REST API integration"
+      },
+      "platform": {
+        "title": "Multi-Platform",
+        "description": "Support for mobile and desktop devices"
       }
     }
   },
   "platforms": {
-    "title": "Access Anywhere",
-    "subtitle": "Multiple platforms supported",
-    "admin": "Admin Dashboard",
-    "web": "Web Client",
-    "mobile": "Mobile App",
-    "desktop": "Desktop App"
+    "title": "Access",
+    "subtitle": "Multiple ways to experience",
+    "components": {
+      "title": "Components",
+      "api": {
+        "title": "Backend",
+        "description": "Core API services"
+      },
+      "client": {
+        "title": "Client Apps",
+        "description": "Mobile, web and desktop versions"
+      },
+      "admin": {
+        "title": "Dashboard",
+        "description": "System and task management"
+      },
+      "web": {
+        "title": "Website",
+        "description": "Product info and documentation"
+      }
+    },
+    "demo": {
+      "title": "Live Demo",
+      "subtitle": "Try it now",
+      "web": "Web App",
+      "admin": "Dashboard",
+      "api": "API Service",
+      "note": "Trial only, self-deployment recommended",
+      "login": "Demo account: test/test"
+    },
+    "downloads": {
+      "title": "Downloads",
+      "subtitle": "Get the apps",
+      "android": "Android",
+      "windows": "Windows",
+      "web": "Web Version",
+      "more": "More Options",
+      "releases": "All Releases"
+    }
   },
   "footer": {
     "about": "About",
     "github": "GitHub",
-    "license": "MIT License"
+    "license": "License",
+    "contribute": "Contribute"
   }
 }
