@@ -118,7 +118,7 @@ const Hero = () => {
               className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start"
             >
               <a
-                href="https://github.com/linshenkx/lingopod-client"
+                href="https://github.com/linshenkx/lingopod"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center px-5 py-2.5 rounded-lg bg-white/[0.08] hover:bg-white/[0.12] active:bg-white/[0.15] text-white font-medium backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/25 focus:ring-offset-2 focus:ring-offset-dark-900"
