@@ -1,6 +1,9 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { Brain, MessageSquare, Mic2, FileText, Languages, Music, Rocket, Smartphone } from 'lucide-react';
+import { container, heading } from '../styles/components';
+import Card from './shared/Card';
+import GradientIcon from './shared/GradientIcon';
 
 const Features = () => {
   const { t } = useTranslation();
@@ -8,60 +11,82 @@ const Features = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      key: 'extract'
+      key: 'extract',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
-      key: 'dialogue'
+      key: 'dialogue',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: <Mic2 className="w-6 h-6" />,
-      key: 'tts'
+      key: 'tts',
+      color: 'from-orange-500 to-red-500'
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      key: 'subtitle'
+      key: 'subtitles',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: <Languages className="w-6 h-6" />,
-      key: 'switch'
+      key: 'switch',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: <Music className="w-6 h-6" />,
-      key: 'audio'
+      key: 'audio',
+      color: 'from-pink-500 to-rose-500'
     },
     {
       icon: <Rocket className="w-6 h-6" />,
-      key: 'api'
+      key: 'api',
+      color: 'from-cyan-500 to-blue-500'
     },
     {
       icon: <Smartphone className="w-6 h-6" />,
-      key: 'platform'
+      key: 'platform',
+      color: 'from-emerald-500 to-green-500'
     }
   ];
 
   return (
-    <section id="features" className="py-12 sm:py-16 lg:py-24 bg-dark-800">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-white">
+    <section id="features" className="relative py-24 bg-dark-800 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:32px]" />
+      
+      <div className={`${container} relative z-10`}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className={`${heading.h2} text-white mb-4`}>
             {t('features.title')}
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-dark-200 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             {t('features.subtitle')}
           </p>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <div key={feature.key} className="bg-dark-700/50 p-4 sm:p-6 rounded-xl">
-              <div className="text-accent-500 mb-3">{feature.icon}</div>
-              <h3 className="text-base sm:text-lg font-semibold mb-2 text-white">
-                {t(`features.items.${feature.key}.title`)}
+            <Card key={feature.key} className="p-6">
+              <GradientIcon
+                icon={feature.icon}
+                gradient={feature.color}
+                className="w-12 h-12 mb-4"
+              />
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {t(`features.${feature.key}.title`)}
               </h3>
-              <p className="text-sm sm:text-base text-dark-200">
-                {t(`features.items.${feature.key}.description`)}
+              <p className="text-gray-400">
+                {t(`features.${feature.key}.description`)}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

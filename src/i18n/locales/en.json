@@ -1,5 +1,8 @@
 {
   "nav": {
+    "architecture": "Architecture",
+    "demo": "Online Demo",
+    "downloads": "Downloads",
     "features": "Features",
     "platforms": "Platforms",
     "github": "GitHub"
@@ -7,92 +10,129 @@
   "hero": {
     "title": "LingoPod",
     "subtitle": "Open-source bilingual podcast generator - Transform web content into immersive language learning",
-    "start": "Get Started",
+    "tryNow": "Try Now",
     "explore": "Source Code"
   },
   "features": {
     "title": "Features",
     "subtitle": "All-in-one solution for content creators and language learners",
-    "items": {
-      "extract": {
-        "title": "Content Extraction",
-        "description": "Auto-extract and summarize web content"
-      },
-      "dialogue": {
-        "title": "AI Dialogue",
-        "description": "Generate natural bilingual conversations"
-      },
-      "tts": {
-        "title": "Text-to-Speech",
-        "description": "High-quality bilingual voice synthesis"
-      },
-      "subtitle": {
-        "title": "Auto Subtitles",
-        "description": "Generate synchronized bilingual subtitles"
-      },
-      "switch": {
-        "title": "Language Switch",
-        "description": "Switch between Chinese and English audio"
-      },
-      "audio": {
-        "title": "Audio Processing",
-        "description": "Smart audio quality optimization"
-      },
-      "api": {
-        "title": "API Support",
-        "description": "Complete REST API integration"
-      },
-      "platform": {
-        "title": "Multi-Platform",
-        "description": "Support for mobile and desktop devices"
-      }
+    "extract": {
+      "title": "Smart Extraction",
+      "description": "Automatically extract and summarize web content intelligently"
+    },
+    "dialogue": {
+      "title": "AI Dialogue",
+      "description": "Generate natural bilingual conversations with AI"
+    },
+    "tts": {
+      "title": "Text-to-Speech",
+      "description": "High-quality bilingual voice synthesis"
+    },
+    "subtitles": {
+      "title": "Auto Subtitles",
+      "description": "Generate synchronized bilingual subtitles"
+    },
+    "switch": {
+      "title": "Language Switch",
+      "description": "Seamlessly switch between Chinese and English audio"
+    },
+    "audio": {
+      "title": "Audio Processing",
+      "description": "Smart audio quality optimization and enhancement"
+    },
+    "api": {
+      "title": "API Support",
+      "description": "Complete RESTful API integration"
+    },
+    "platform": {
+      "title": "Multi-Platform",
+      "description": "Support for Android, Windows and Web"
     }
   },
   "platforms": {
-    "title": "Access",
-    "subtitle": "Multiple ways to experience",
-    "components": {
-      "title": "Components",
+    "architecture": {
+      "title": "Project Architecture",
+      "subtitle": "Complete open-source solution, supports self-hosting",
       "api": {
-        "title": "Backend",
-        "description": "Core API services"
+        "title": "API Server",
+        "description": "Provides core RESTful API, supports content processing and audio generation"
       },
       "client": {
         "title": "Client Apps",
-        "description": "Mobile, web and desktop versions"
+        "description": "Support for Android, Windows and Web platforms"
       },
-      "admin": {
-        "title": "Dashboard",
-        "description": "System and task management"
+      "manager": {
+        "title": "Admin Dashboard",
+        "description": "Task and system management, monitor service status"
       },
       "web": {
         "title": "Website",
-        "description": "Product info and documentation"
+        "description": "Project showcase and documentation"
       }
     },
     "demo": {
-      "title": "Live Demo",
-      "subtitle": "Try it now",
-      "web": "Web App",
-      "admin": "Dashboard",
-      "api": "API Service",
-      "note": "Trial only, self-deployment recommended",
-      "login": "Demo account: test/test"
+      "title": "Online Demo",
+      "subtitle": "Quick access to features, no installation required",
+      "client": {
+        "title": "Web Client",
+        "description": "Generate and play bilingual podcast content",
+        "note": "Test account: test/test (for demo only, supports WeChat official account articles only)",
+        "action": "Visit Now"
+      },
+      "manager": {
+        "title": "Admin Dashboard",
+        "description": "Manage tasks and view system status",
+        "action": "Visit Now"
+      },
+      "api": {
+        "title": "API Service",
+        "description": "RESTful API service",
+        "action": "Visit Now"
+      }
     },
     "downloads": {
-      "title": "Downloads",
-      "subtitle": "Get the apps",
-      "android": "Android",
-      "windows": "Windows",
-      "web": "Web Version",
-      "more": "More Options",
-      "releases": "All Releases"
+      "title": "Client Downloads",
+      "subtitle": "Install on your preferred device",
+      "android": {
+        "title": "Android APK",
+        "action": "Download Package"
+      },
+      "windows": {
+        "title": "Windows Client",
+        "action": "Download Package"
+      },
+      "web": {
+        "title": "Web Version",
+        "action": "Download Package"
+      },
+      "more": "View More Versions"
+    },
+    "title": "Available Platforms",
+    "subtitle": "Access LingoPod from your preferred device",
+    "android": {
+      "title": "Android App",
+      "description": "Download from Google Play"
+    },
+    "windows": {
+      "title": "Windows Client",
+      "description": "Download desktop version"
+    },
+    "web": {
+      "title": "Web Version",
+      "description": "Use directly in browser"
     }
   },
   "footer": {
-    "about": "About",
-    "github": "GitHub",
-    "license": "License",
-    "contribute": "Contribute"
+    "copyright": " 2024 LingoPod. All rights reserved.",
+    "links": {
+      "github": "GitHub",
+      "docs": "Documentation",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "made": {
+      "text": "Made with",
+      "by": "by"
+    }
   }
 }

@@ -1,0 +1,48 @@
+:root {
+  /* 默认亮色主题变量 */
+  --background: #ffffff;
+  --surface: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border: #e5e7eb;
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-border: rgba(0, 0, 0, 0.1);
+
+  /* 动画持续时间 */
+  --theme-transition: 0.3s ease;
+}
+
+:root.dark {
+  --background: #111827;
+  --surface: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border: #374151;
+  --header-bg: rgba(17, 24, 39, 0.8);
+  --header-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color var(--theme-transition),
+              color var(--theme-transition);
+}
+
+/* 主题切换按钮动画 */
+.theme-toggle {
+  opacity: 0.8;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.theme-toggle svg {
+  transition: transform var(--theme-transition);
+}
+
+.theme-toggle:active svg {
+  transform: scale(0.95);
+}

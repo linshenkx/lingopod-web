@@ -1,98 +1,118 @@
 {
   "nav": {
-    "features": "功能特点",
-    "platforms": "使用平台",
+    "architecture": "项目架构",
+    "demo": "在线演示",
+    "downloads": "下载安装",
+    "features": "功能特性",
+    "platforms": "支持平台",
     "github": "GitHub"
   },
   "hero": {
-    "title": "LingoPod (译播客)",
-    "subtitle": "开源的智能双语播客生成工具 - 将网页内容转化为沉浸式英语学习体验",
-    "start": "开始使用",
-    "explore": "项目源码"
+    "title": "LingoPod 译播客",
+    "subtitle": "开源双语播客生成工具 - 将网页内容转换为沉浸式语言学习材料",
+    "tryNow": "立即体验",
+    "explore": "源代码"
   },
   "features": {
-    "title": "核心功能",
+    "title": "功能特性",
     "subtitle": "为内容创作者和语言学习者提供一站式解决方案",
-    "items": {
-      "extract": {
-        "title": "智能内容提取",
-        "description": "自动从网页提取关键内容并生成摘要"
-      },
-      "dialogue": {
-        "title": "AI 对话生成",
-        "description": "自动生成自然流畅的双语对话"
-      },
-      "tts": {
-        "title": "双语语音合成",
-        "description": "高品质中英文发音转换"
-      },
-      "subtitle": {
-        "title": "双语字幕生成",
-        "description": "自动生成中英文同步字幕"
-      },
-      "switch": {
-        "title": "语言切换",
-        "description": "一键切换中英文音频"
-      },
-      "audio": {
-        "title": "音频优化",
-        "description": "智能处理音频质量"
-      },
-      "api": {
-        "title": "开放接口",
-        "description": "提供完整的 API 支持"
-      },
-      "platform": {
-        "title": "多平台支持",
-        "description": "支持手机、电脑等多种设备"
-      }
+    "extract": {
+      "title": "智能提取",
+      "description": "自动提取并智能总结网页内容"
+    },
+    "dialogue": {
+      "title": "AI 对话",
+      "description": "生成自然流畅的双语对话"
+    },
+    "tts": {
+      "title": "语音合成",
+      "description": "高品质的双语语音合成"
+    },
+    "subtitles": {
+      "title": "自动字幕",
+      "description": "生成同步的双语字幕"
+    },
+    "switch": {
+      "title": "语言切换",
+      "description": "无缝切换中英文音频"
+    },
+    "audio": {
+      "title": "音频处理",
+      "description": "智能音频质量优化与增强"
+    },
+    "api": {
+      "title": "API 支持",
+      "description": "完整的 RESTful API ��成"
+    },
+    "platform": {
+      "title": "多平台支持",
+      "description": "支持安卓、Windows 和网页版"
     }
   },
   "platforms": {
-    "title": "使用方式",
-    "subtitle": "多种方式体验产品功能",
-    "components": {
-      "title": "系统组件",
+    "architecture": {
+      "title": "项目架构",
+      "subtitle": "完整的开源解决方案，支持自托管部署",
       "api": {
-        "title": "服务端",
-        "description": "核心功能接口服务"
+        "title": "API 服务端",
+        "description": "提供核心 RESTful API，支持内容处理和音频生成"
       },
       "client": {
-        "title": "客户端",
-        "description": "手机、网页、电脑版本"
+        "title": "客户端应用",
+        "description": "支持安卓、Windows 和网页多平台"
       },
-      "admin": {
+      "manager": {
         "title": "管理后台",
-        "description": "系统管理与任务监控"
+        "description": "任务和系统管理，监控服务状态"
       },
       "web": {
         "title": "官网",
-        "description": "产品介绍与文档"
+        "description": "项目展示和文档"
       }
     },
     "demo": {
       "title": "在线体验",
-      "subtitle": "快速体验产品功能",
-      "web": "网页版",
-      "admin": "管理后台",
-      "api": "接口服务",
-      "note": "仅供体验，建议自行部署",
-      "login": "测试账号：test/test"
+      "subtitle": "快速体验产品功能，无需下载安装",
+      "client": {
+        "title": "网页客户端",
+        "description": "生成和播放双语播客内容",
+        "note": "测试账号：test/test（仅供功能体验，仅支持微信公众号文章链接）",
+        "action": "立即访问"
+      },
+      "manager": {
+        "title": "管理后台",
+        "description": "管理任务和查看系统状态",
+        "action": "立即访问"
+      },
+      "api": {
+        "title": "API 服务",
+        "description": "RESTful API 接口服务",
+        "action": "立即访问"
+      }
     },
     "downloads": {
-      "title": "下载安装",
-      "subtitle": "获取客户端应用",
-      "android": "安卓版",
-      "windows": "电脑版",
-      "web": "网页版",
-      "more": "更多版本",
-      "releases": "历史版本"
+      "title": "客户端下载",
+      "subtitle": "下载安装到您喜欢的设备",
+      "android": {
+        "title": "安卓应用",
+        "action": "下载安装包"
+      },
+      "windows": {
+        "title": "Windows 客户端",
+        "action": "下载安装包"
+      },
+      "web": {
+        "title": "网页版",
+        "action": "下载安装包"
+      },
+      "more": "查看更多版本"
     }
   },
   "footer": {
-    "about": "关于我们",
-    "github": "开源仓库",
-    "license": "开源协议",
-    "contribute": "参与贡献"
+    "copyright": " 2024 译播客",
+    "made": {
+      "text": "由",
+      "by": "开发"
+    }
   }
 }
