@@ -88,7 +88,7 @@ const OnlineDemoSection = () => {
                   {demo.key === 'client' && (
                     <div className="flex items-center text-sm text-yellow-500 bg-yellow-500/10 px-3 py-2 rounded-lg">
                       <AlertTriangle className="w-4 h-4 mr-2 flex-shrink-0" />
-                      测试账号：test/test（仅供功能体验，仅支持微信公众号文章链接）
+                      {t('platforms.demo.client.note')}
                     </div>
                   )}
                 </div>

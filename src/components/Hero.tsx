@@ -100,6 +100,14 @@ const Hero = () => {
               >
                 {t('hero.subtitle')}
               </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent"
+              >
+                lingopod.top
+              </motion.p>
             </div>
 
             {/* 按钮组 - 突出“立即体验”按钮 */}
