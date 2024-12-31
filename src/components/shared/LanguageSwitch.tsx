@@ -15,7 +15,11 @@ const LanguageSwitch: React.FC = () => {
     const currentLang = i18n.language;
     const nextLang = currentLang === 'en' ? 'zh' : 'en';
     i18n.changeLanguage(nextLang);
-    localStorage.setItem('i18nextLng', nextLang);
+    try {
+      localStorage.setItem('i18nextLng', nextLang);
+    } catch (error) {
+      console.warn('Unable to save language preference to localStorage:', error);
+    }
   };
 
   return (

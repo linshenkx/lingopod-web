@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Database, Smartphone, Layout, Globe } from 'lucide-react';
-import { container, heading } from '../styles/components';
-import ArchitectureCard from './shared/ArchitectureCard';
+import { heading } from '../styles/components';
+import SourceCodeCard from './shared/SourceCodeCard';
 
-const ArchitectureSection = () => {
+const SourceCodeSection = () => {
   const { t } = useTranslation();
 
-  const architecture = [
+  const sourceCode = [
     {
       icon: <Database className="w-6 h-6 text-blue-500" />,
       title: t('platforms.architecture.api.title'),
@@ -48,8 +48,8 @@ const ArchitectureSection = () => {
         {t('platforms.architecture.subtitle')}
       </p>
       <div className="grid md:grid-cols-2 gap-6">
-        {architecture.map((item) => (
-          <ArchitectureCard
+        {sourceCode.map((item) => (
+          <SourceCodeCard
             key={item.title}
             {...item}
           />
@@ -59,4 +59,4 @@ const ArchitectureSection = () => {
   );
 };
 
-export default ArchitectureSection;
+export default SourceCodeSection;

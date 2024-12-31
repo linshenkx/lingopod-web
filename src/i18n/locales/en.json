@@ -1,21 +1,26 @@
 {
   "nav": {
-    "architecture": "Architecture",
+    "features": "Features",
     "demo": "Online Demo",
     "downloads": "Downloads",
-    "features": "Features",
     "platforms": "Platforms",
-    "github": "GitHub"
+    "github": "GitHub",
+    "architecture": "Source Code"
   },
   "hero": {
     "title": "LingoPod",
-    "subtitle": "Open-source bilingual podcast generator - Transform web content into immersive language learning",
+    "subtitle1": "Open-source bilingual podcast generator",
+    "subtitle2": "Transform web content into immersive language learning",
     "tryNow": "Try Now",
     "explore": "Source Code"
   },
   "features": {
     "title": "Features",
     "subtitle": "All-in-one solution for content creators and language learners",
+    "mainFeatures": {
+      "title": "Core Features",
+      "subtitle": "Powerful content processing and audio generation capabilities"
+    },
     "extract": {
       "title": "Smart Extraction",
       "description": "Automatically extract and summarize web content intelligently"
@@ -47,27 +52,31 @@
     "platform": {
       "title": "Multi-Platform",
       "description": "Support for Android, Windows and Web"
+    },
+    "ttsAndSwitch": {
+      "title": "Bilingual Audio",
+      "description": "High-quality voice synthesis with seamless Chinese-English switching"
     }
   },
   "platforms": {
     "architecture": {
-      "title": "Project Architecture",
+      "title": "Source Code",
       "subtitle": "Complete open-source solution, supports self-hosting",
       "api": {
-        "title": "API Server",
-        "description": "Provides core RESTful API, supports content processing and audio generation"
+        "title": "API Server Source",
+        "description": "Core server source code for content processing and audio generation"
       },
       "client": {
-        "title": "Client Apps",
-        "description": "Support for Android, Windows and Web platforms"
+        "title": "Client Source",
+        "description": "Cross-platform client application source code for Android, Windows and Web"
       },
       "manager": {
-        "title": "Admin Dashboard",
-        "description": "Task and system management, monitor service status"
+        "title": "Admin Dashboard Source",
+        "description": "System management and monitoring source code with complete admin features"
       },
       "web": {
-        "title": "Website",
-        "description": "Project showcase and documentation"
+        "title": "Website Source",
+        "description": "Project website and documentation source code"
       }
     },
     "demo": {
@@ -133,6 +142,62 @@
     "made": {
       "text": "Made with",
       "by": "by"
+    }
+  },
+  "englishLevels": {
+    "title": "Multi-level English Support",
+    "subtitle": "Choose content that matches your English proficiency",
+    "progressiveDescription": "Start with simplified versions of the same material and gradually increase difficulty for progressive English learning",
+    "levels": {
+      "beginner": {
+        "title": "Elementary English",
+        "description": "CEFR A2-B1, CET-4",
+        "features": [
+          "Basic vocabulary and grammar",
+          "Daily conversation scenarios",
+          "Simple news articles"
+        ]
+      },
+      "intermediate": {
+        "title": "Intermediate English",
+        "description": "CEFR B1-B2, CET-6",
+        "features": [
+          "Advanced vocabulary and expressions",
+          "Business English scenarios",
+          "Professional article comprehension"
+        ]
+      },
+      "advanced": {
+        "title": "Advanced English",
+        "description": "CEFR B2-C1, IELTS 6.5-7.5",
+        "features": [
+          "Native-like expressions",
+          "Academic English applications",
+          "Complex topic discussions"
+        ]
+      }
+    }
+  },
+  "rssFeatures": {
+    "title": "RSS Subscription Support",
+    "subtitle": "Continuously receive English learning materials you're interested in",
+    "features": {
+      "management": {
+        "title": "RSS Source Management",
+        "description": "Easily add and manage your preferred English learning sources"
+      },
+      "autoFetch": {
+        "title": "Automatic Updates",
+        "description": "System automatically fetches new content, no manual operation needed"
+      },
+      "smartUpdate": {
+        "title": "Smart Incremental Updates",
+        "description": "Only update new content, saving resources and improving efficiency"
+      },
+      "customConfig": {
+        "title": "Personalized Configuration",
+        "description": "Customize update frequency and content filtering rules"
+      }
     }
   }
 }

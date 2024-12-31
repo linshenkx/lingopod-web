@@ -1,24 +1,25 @@
 import React from 'react';
-import { Menu, Github, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import LanguageSwitch from './shared/LanguageSwitch';
+
+interface MenuItem {
+  href: string;
+  label: string;
+  icon?: React.ReactNode;
+  external?: boolean;
+}
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { t } = useTranslation();
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { href: '#features', label: t('nav.features') },
-    { href: '#architecture', label: t('nav.architecture') },
     { href: '#demo', label: t('nav.demo') },
     { href: '#downloads', label: t('nav.downloads') },
-    {
-      href: 'https://github.com/linshenkx/lingopod',
-      label: t('nav.github'),
-      icon: <Github className="w-5 h-5" />,
-      external: true
-    }
+    { href: '#source-code', label: t('nav.architecture') }
   ];
 
   return (

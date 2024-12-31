@@ -55,7 +55,7 @@ const OnlineDemoSection = () => {
             key={demo.title} 
             className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
-            <div className="flex flex-col items-start space-y-4">
+            <div className="flex flex-col items-center text-center space-y-4">
               <GradientIcon
                 icon={demo.icon}
                 gradient={demo.gradient}
@@ -74,7 +74,7 @@ const OnlineDemoSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`
-                      inline-flex items-center px-6 py-2.5 
+                      inline-flex items-center justify-center px-6 py-2.5 
                       text-sm font-medium text-white
                       bg-gradient-to-r ${demo.gradient}
                       rounded-lg transition-all duration-300
@@ -86,7 +86,7 @@ const OnlineDemoSection = () => {
                     <Globe className="w-4 h-4 ml-2" />
                   </a>
                   {demo.key === 'client' && (
-                    <div className="flex items-center text-sm text-yellow-500 bg-yellow-500/10 px-3 py-2 rounded-lg">
+                    <div className="flex items-center justify-center text-sm text-yellow-500 bg-yellow-500/10 px-3 py-2 rounded-lg">
                       <AlertTriangle className="w-4 h-4 mr-2 flex-shrink-0" />
                       {t('platforms.demo.client.note')}
                     </div>

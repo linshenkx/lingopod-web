@@ -37,6 +37,7 @@ const DownloadsSection = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      className="mb-24"
     >
       <h2 className={`${heading.h2} text-white mb-6 text-center`}>
         {t('platforms.downloads.title')}
@@ -47,7 +48,7 @@ const DownloadsSection = () => {
       <div className="grid md:grid-cols-3 gap-8">
         {downloads.map((item) => (
           <Card key={item.title} className="p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="flex flex-col items-start space-y-4">
+            <div className="flex flex-col items-center text-center space-y-4">
               <GradientIcon
                 icon={item.icon}
                 gradient={item.gradient}
@@ -78,7 +79,7 @@ const DownloadsSection = () => {
           </Card>
         ))}
       </div>
-      <div className="text-center mt-8">
+      <div className="text-center mt-16">
         <a
           href="https://github.com/linshenkx/lingopod-client/releases"
           target="_blank"

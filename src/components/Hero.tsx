@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Github, Headphones, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Hero = () => {
   const { t } = useTranslation();
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const sliderRef = useRef<Slider>(null);
 
   const images = [
     {
@@ -19,47 +21,34 @@ const Hero = () => {
     }
   ];
 
-  // 自动轮播
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDirection(1); // Set direction to 1 for next slide
-      setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () => {
-    setDirection(1); // Set direction to 1 for next slide
-    setCurrentSlide((prev) => (prev + 1) % images.length);
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    arrows: false,
+    className: "rounded-3xl overflow-hidden",
+    dotsClass: "slick-dots custom-dots",
+    customPaging: () => (
+      <div className="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300" />
+    ),
   };
 
-  const prevSlide = () => {
-    setDirection(-1); // Set direction to -1 for previous slide
-    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+  const goToPrev = () => {
+    sliderRef.current?.slickPrev();
   };
 
-  const slideVariants = {
-    enter: (direction: number) => {
-      return {
-        x: direction > 0 ? 1000 : -1000,
-        opacity: 0
-      };
-    },
-    center: {
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => {
-      return {
-        x: direction < 0 ? 1000 : -1000,
-        opacity: 0
-      };
-    }
+  const goToNext = () => {
+    sliderRef.current?.slickNext();
   };
 
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-b from-dark-900 to-dark-950">
-      {/* 背景效果 - 优化层叠效果 */}
+      {/* 背景效果 */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:32px] pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-secondary-500/5 to-transparent backdrop-blur-[1px]" />
@@ -79,7 +68,7 @@ const Hero = () => {
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
                 <span className="block text-4xl sm:text-5xl md:text-6xl xl:text-7xl mb-6 md:mb-8 whitespace-normal pb-2">
-                  <span className="inline-block bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent [text-wrap:balance] leading-[1.4] hover:scale-105 transition-transform duration-300">
+                  <span className="inline-block bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent leading-[1.4] hover:scale-105 transition-transform duration-300">
                     {t('hero.title')}
                   </span>
                   <motion.span 
@@ -96,48 +85,45 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-base sm:text-lg md:text-xl text-gray-300/90 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium [text-wrap:pretty]"
+                className="text-lg sm:text-xl md:text-2xl text-gray-300/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium space-y-2"
               >
-                {t('hero.subtitle')}
+                <span className="block">{t('hero.subtitle1')}</span>
+                <span className="block">{t('hero.subtitle2')}</span>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent max-w-full overflow-visible whitespace-nowrap leading-relaxed py-2"
               >
                 lingopod.top
               </motion.p>
             </div>
 
-            {/* 按钮组 - 突出“立即体验”按钮 */}
+            {/* 按钮组 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start"
+              className="flex flex-wrap gap-8 md:gap-12 justify-center lg:justify-start mt-16"
             >
-              <a
+              <motion.a
                 href="https://github.com/linshenkx/lingopod"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center px-5 py-2.5 rounded-lg bg-white/[0.08] hover:bg-white/[0.12] active:bg-white/[0.15] text-white font-medium backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/25 focus:ring-offset-2 focus:ring-offset-dark-900"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-dark-800/60 hover:bg-dark-800/80 border border-white/10 hover:border-white/20 text-white/90 hover:text-white transition-all duration-300 backdrop-blur-sm group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Github className="w-5 h-5 mr-2 transition-transform group-hover:scale-110 group-hover:rotate-3" />
-                <span className="relative inline-block overflow-hidden">
-                  <span className="relative inline-block transform transition-transform group-hover:translate-y-[-100%]">
-                    GitHub
-                  </span>
-                  <span className="absolute top-full left-0 inline-block transform transition-transform group-hover:translate-y-[-100%]">
-                    GitHub
-                  </span>
-                </span>
-              </a>
-              <a 
+                <Github className="w-5 h-5 mr-2" />
+                <span>GitHub</span>
+              </motion.a>
+
+              <a
                 href="https://client.lingopod.top/"
+                className="relative inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 group overflow-hidden"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600 hover:from-primary-500 hover:via-primary-400 hover:to-primary-500 active:from-primary-700 active:via-primary-600 active:to-primary-700 text-white font-semibold shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-900"
               >
                 <span className="relative z-10 flex items-center">
                   <span className="relative inline-block overflow-hidden">
@@ -156,58 +142,41 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* 轮播图区域 - 优化阴影和边框效果 */}
-          <div className="relative w-full max-w-5xl mx-auto lg:mx-0 lg:-mr-8">
-            <div className="relative aspect-[16/12] rounded-3xl overflow-hidden shadow-3xl shadow-black/40 backdrop-blur-lg">
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.img
-                  key={currentSlide}
-                  src={images[currentSlide].src}
-                  alt={images[currentSlide].alt}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 }
-                  }}
-                  className="absolute inset-0 w-full h-full object-contain p-2"
-                />
-              </AnimatePresence>
-
-              {/* 轮播控制按钮 - 优化交互效果 */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-2 z-20">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setDirection(index > currentSlide ? 1 : -1);
-                      setCurrentSlide(index);
-                    }}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide
-                        ? 'w-6 bg-primary-500'
-                        : 'w-2 bg-white/30 hover:bg-white/50'
-                    }`}
-                  />
+          {/* 轮播图区域 */}
+          <div className="relative w-full max-w-[360px] sm:max-w-[420px] md:max-w-[480px] mx-auto lg:ml-auto lg:mr-16 xl:mr-24 mt-12 lg:mt-0">
+            <div className="relative aspect-[3/5] backdrop-blur-lg border border-white/10 rounded-3xl">
+              <Slider ref={sliderRef} {...sliderSettings}>
+                {images.map((image, index) => (
+                  <div key={index} className="outline-none px-4 py-5 h-full">
+                    <div className="relative h-full flex items-center justify-center">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="max-w-full max-h-full w-auto h-auto object-contain select-none rounded-2xl shadow-xl"
+                        draggable="false"
+                      />
+                    </div>
+                  </div>
                 ))}
-              </div>
+              </Slider>
 
-              {/* 左右箭头 - 优化按钮样式 */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white/90 hover:text-white backdrop-blur-sm transform hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50"
+              {/* 自定义切换按钮 */}
+              <motion.button
+                onClick={goToPrev}
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white/90 hover:text-white backdrop-blur-sm transition-all duration-300 z-10"
+                whileHover={{ scale: 1.1, x: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white/90 hover:text-white backdrop-blur-sm transform hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50"
+              </motion.button>
+              <motion.button
+                onClick={goToNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white/90 hover:text-white backdrop-blur-sm transition-all duration-300 z-10"
+                whileHover={{ scale: 1.1, x: 2 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <ChevronRight className="w-6 h-6" />
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>

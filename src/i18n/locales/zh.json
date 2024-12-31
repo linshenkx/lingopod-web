@@ -1,24 +1,45 @@
 {
   "nav": {
-    "architecture": "项目架构",
-    "demo": "在线演示",
-    "downloads": "下载安装",
     "features": "功能特性",
+    "demo": "在线体验",
+    "downloads": "下载安装",
     "platforms": "支持平台",
-    "github": "GitHub"
+    "github": "GitHub",
+    "architecture": "项目源码"
   },
   "hero": {
     "title": "LingoPod 译播客",
-    "subtitle": "开源双语播客生成工具 - 将网页内容转换为沉浸式语言学习材料",
+    "subtitle1": "开源双语播客生成工具",
+    "subtitle2": "将网页内容转换为沉浸式语言学习材料",
     "tryNow": "立即体验",
     "explore": "源代码"
   },
   "features": {
     "title": "功能特性",
-    "subtitle": "为内容创作者和语言学习者提供一站式解决方案",
+    "subtitle": "将网页内容转换为沉浸式英语学习材料",
+    "mainFeatures": {
+      "title": "核心功能",
+      "subtitle": "强大的内容处理与音频生成能力"
+    },
+    "beginner": {
+      "title": "初级英语支持",
+      "description": "适合CET-4水平的基础英语学习内容"
+    },
+    "intermediate": {
+      "title": "中级英语支持",
+      "description": "面向CET-6水平的进阶英语学习材料"
+    },
+    "advanced": {
+      "title": "高级英语支持",
+      "description": "针对雅思6.5+水平的专业英语内容"
+    },
+    "rss": {
+      "title": "RSS订阅功能",
+      "description": "自动获取和更新感兴趣的英语学习源"
+    },
     "extract": {
-      "title": "智能提取",
-      "description": "自动提取并智能总结网页内容"
+      "title": "智能内容处理",
+      "description": "自动提取网页内容，智能生成双语对话"
     },
     "dialogue": {
       "title": "AI 对话",
@@ -28,9 +49,13 @@
       "title": "语音合成",
       "description": "高品质的双语语音合成"
     },
+    "ttsAndSwitch": {
+      "title": "双语音频生成",
+      "description": "高品质语音合成，支持中英文无缝切换"
+    },
     "subtitles": {
       "title": "自动字幕",
-      "description": "生成同步的双语字幕"
+      "description": "生成同步的双语字幕，辅助学习理解"
     },
     "switch": {
       "title": "语言切换",
@@ -42,32 +67,32 @@
     },
     "api": {
       "title": "API 支持",
-      "description": "完整的 RESTful API ��成"
+      "description": "完整的 RESTful API 生成"
     },
     "platform": {
       "title": "多平台支持",
-      "description": "支持安卓、Windows 和网页版"
+      "description": "支持安卓、Windows 和网页版，随时随地学习"
     }
   },
   "platforms": {
     "architecture": {
-      "title": "项目架构",
+      "title": "源码工程",
       "subtitle": "完整的开源解决方案，支持自托管部署",
       "api": {
-        "title": "API 服务端",
-        "description": "提供核心 RESTful API，支持内容处理和音频生成"
+        "title": "API 服务端源码",
+        "description": "核心服务端源码，提供内容处理和音频生成能力"
       },
       "client": {
-        "title": "客户端应用",
-        "description": "支持安卓、Windows 和网页多平台"
+        "title": "客户端源码",
+        "description": "跨平台客户端应用源码，支持安卓、Windows 和网页版"
       },
       "manager": {
-        "title": "管理后台",
-        "description": "任务和系统管理，监控服务状态"
+        "title": "管理后台源码",
+        "description": "系统管理和监控源码，提供完整的后台管理功能"
       },
       "web": {
-        "title": "官网",
-        "description": "项目展示和文档"
+        "title": "官网源码",
+        "description": "项目官网和文档源码"
       }
     },
     "demo": {
@@ -113,6 +138,62 @@
     "made": {
       "text": "由",
       "by": "开发"
+    }
+  },
+  "englishLevels": {
+    "title": "多级英语难度支持",
+    "subtitle": "根据您的英语水平选择合适的学习内容",
+    "progressiveDescription": "从同一份材料的简单版本开始，逐步提升难度，实现循序渐进的英语学习",
+    "levels": {
+      "beginner": {
+        "title": "初级英语",
+        "description": "CEFR A2-B1 / CET-4 水平",
+        "features": [
+          "基础词汇和语法",
+          "日常对话场景",
+          "简单新闻文章"
+        ]
+      },
+      "intermediate": {
+        "title": "中级英语",
+        "description": "CEFR B1-B2 / CET-6 水平",
+        "features": [
+          "进阶词汇和表达",
+          "商务英语场景",
+          "专业文章理解"
+        ]
+      },
+      "advanced": {
+        "title": "高级英语",
+        "description": "CEFR B2-C1 / IELTS 6.5-7.5 水平",
+        "features": [
+          "地道表达方式",
+          "学术英语应用",
+          "复杂话题讨论"
+        ]
+      }
+    }
+  },
+  "rssFeatures": {
+    "title": "RSS订阅支持",
+    "subtitle": "持续获取感兴趣的英语学习材料",
+    "features": {
+      "management": {
+        "title": "RSS源管理与监控",
+        "description": "轻松添加和管理您感兴趣的英语学习源"
+      },
+      "autoFetch": {
+        "title": "自动定时抓取更新",
+        "description": "系统自动获取最新内容，无需手动操作"
+      },
+      "smartUpdate": {
+        "title": "智能增量更新检测",
+        "description": "只更新新增内容，节省资源提高效率"
+      },
+      "customConfig": {
+        "title": "个性化订阅配置",
+        "description": "自定义更新频率和内容过滤规则"
+      }
     }
   }
 }

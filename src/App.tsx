@@ -3,12 +3,15 @@ import Layout from './components/shared/Layout';
 import Loading from './components/shared/Loading';
 import ErrorBoundary from './components/shared/ErrorBoundary';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { container } from './styles/components';
 import './styles/global.css';
 
 // Lazy load components for better performance
 const Hero = React.lazy(() => import('./components/Hero'));
 const Features = React.lazy(() => import('./components/Features'));
-const Platforms = React.lazy(() => import('./components/Platforms'));
+const OnlineDemoSection = React.lazy(() => import('./components/OnlineDemoSection'));
+const DownloadsSection = React.lazy(() => import('./components/DownloadsSection'));
+const SourceCodeSection = React.lazy(() => import('./components/SourceCodeSection'));
 
 function App() {
   useEffect(() => {
@@ -39,7 +42,19 @@ function App() {
           <Suspense fallback={<Loading size="lg" className="min-h-[90vh]" />}>
             <Hero />
             <Features />
-            <Platforms />
+            <section id="platforms" className="py-16 bg-dark-900">
+              <div className={`${container}`}>
+                <div id="demo" className="scroll-mt-24">
+                  <OnlineDemoSection />
+                </div>
+                <div id="downloads" className="scroll-mt-24">
+                  <DownloadsSection />
+                </div>
+                <div id="source-code" className="scroll-mt-24">
+                  <SourceCodeSection />
+                </div>
+              </div>
+            </section>
           </Suspense>
         </Layout>
       </ErrorBoundary>
