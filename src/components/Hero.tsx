@@ -12,12 +12,20 @@ const Hero = () => {
 
   const images = [
     {
-      src: "https://ghproxy.always200.com/https://raw.githubusercontent.com/linshenkx/lingopod-client/main/images/home-dark.png",
+      src: "https://ghproxy.always200.com/https://raw.githubusercontent.com/linshenkx/lingopod-client/main/images/home-dark.jpg",
       alt: "LingoPod Home Dark Mode"
     },
     {
-      src: "https://ghproxy.always200.com/https://raw.githubusercontent.com/linshenkx/lingopod-client/main/images/player-dark.png",
+      src: "https://ghproxy.always200.com/https://raw.githubusercontent.com/linshenkx/lingopod-client/main/images/player-dark.jpg",
       alt: "LingoPod Player Dark Mode"
+    },
+    {
+      src: "https://ghproxy.always200.com/https://raw.githubusercontent.com/linshenkx/lingopod-client/main/images/create-job.jpg",
+      alt: "LingoPod Player Create Job"
+    },
+    {
+      src: "https://ghproxy.always200.com/https://raw.githubusercontent.com/linshenkx/lingopod-client/main/images/job-manager.jpg",
+      alt: "LingoPod Player Job Manager"
     }
   ];
 
